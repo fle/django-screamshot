@@ -7,4 +7,5 @@ app_settings = dict({
     'CLI_ARGS': [],
     'CASPERJS_CMD': None,
     'PHANTOMJS_CMD': None,
+    'MAX_WAIT': 3000
 }, **getattr(settings, 'SCREAMSHOT_CONFIG', {}))

@@ -62,6 +62,9 @@ height
 data
   HTTP data to be posted (*default:* ``{}``)
 
+wait
+  The screenshot will be performed only after the given amount of time (in milliseconds).
+
 waitfor
   CSS3 selector. The screenshot will be performed only once this selector is
   satisfied. Typical usage: if your page contains a heavy javascript processing,

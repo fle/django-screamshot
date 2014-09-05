@@ -107,6 +107,10 @@ def casperjs_capture(stream, url, method=None, width=None, height=None,
         if waitfor:
             cmd += ['--waitfor=%s' % waitfor]
         if wait:
+            try:
+                wait = min(int(wait), app_settings['MAX_WAIT'])
+            except ValueError:
+                wait = app_settings['MAX_WAIT']
             cmd += ['--wait=%s' % wait]
         logger.debug(cmd)
         # Run CasperJS process
